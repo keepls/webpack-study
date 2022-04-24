@@ -1,5 +1,6 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 // require("webpack-dev-server")
 const path=require("path")
 
@@ -15,8 +16,14 @@ const config={
     module:{
         rules:[ //转换规则
             {
-                test:/\.css$/, //匹配所有的css文件
-                use:["style-loader","css-loader"] //use:对应loader的名称
+                test:/\.(s[ac]|c)ss$/i, //匹配所有的css/sass/scss文件
+                use:[
+                    MiniCssExtractPlugin.loader,
+                    // "style-loader",
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader"
+                ] //use:对应loader的名称
             }
         ]
     },
@@ -24,7 +31,10 @@ const config={
         new HtmlWebpackPlugin({
             template:"./src/index.html"
         }),
-        new CleanWebpackPlugin() // 引入插件
+        new CleanWebpackPlugin(), // 引入插件
+        new MiniCssExtractPlugin({
+            filename:"[name].[hash:8].css"
+        })
     ],
     devServer:{
         contentBase:path.resolve(__dirname,"public"), //静态文件目录
