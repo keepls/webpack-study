@@ -1,8 +1,4 @@
-body{
-    /* margin: 0 auto; */
-    height: 100px;
-    max-width: 300px;
-    background: plum;
-    text-align: center;
-    transform: translateX(-50%);
+.name{
+    font-size: 30px;
+    color: red;
 }
