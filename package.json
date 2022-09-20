@@ -8,6 +8,7 @@
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
     "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "^7.0.3",
     "postcss": "^8.4.12",
@@ -17,16 +18,15 @@
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.72.0",
+    "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^3.11.2"
   },
-  
   "scripts": {
-
-    "dev": "cross-env NODE_ENV=dev webpack serve --mode none",  
+    "dev": "cross-env NODE_ENV=dev webpack serve --mode none",
     "test": "cross-env NODE_ENV=test webpack --mode development",
-    "build": "cross-env NODE_ENV=prod webpack --mode production"
+    "build": "cross-env NODE_ENV=prod webpack --mode production",
+    "analyzer": "cross-env NODE_ENV=prod webpack --progress --mode production",
+    "prepare":"husky install"
   }
-  
 }
-
