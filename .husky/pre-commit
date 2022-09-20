@@ -3,3 +3,6 @@
 
 # npm run lint
 
+# pre-commit，在 git commit 提交消息前执行，一般用来执行 lint，校验代码格式。
+# commit-msg，在 git commit 提交消息时执行，一般用来验证消息是否符合规范
+# pre-push，在推送前执行，一般用于执行测试

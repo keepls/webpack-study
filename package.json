@@ -3,6 +3,7 @@
     "@babel/core": "^7.19.0",
     "@babel/preset-env": "^7.19.0",
     "babel-loader": "^8.2.5",
+    "chalk": "^5.0.1",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
@@ -27,6 +28,6 @@
     "test": "cross-env NODE_ENV=test webpack --mode development",
     "build": "cross-env NODE_ENV=prod webpack --mode production",
     "analyzer": "cross-env NODE_ENV=prod webpack --progress --mode production",
-    "prepare":"husky install"
+    "prepare": "husky install"
   }
 }

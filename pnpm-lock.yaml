@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': ^7.19.0
   '@babel/preset-env': ^7.19.0
   babel-loader: ^8.2.5
+  chalk: ^5.0.1
   clean-webpack-plugin: ^4.0.0
   cross-env: ^7.0.3
   css-loader: ^6.7.1
@@ -27,6 +28,7 @@ devDependencies:
   '@babel/core': 7.19.0
   '@babel/preset-env': 7.19.0_@babel+core@7.19.0
   babel-loader: 8.2.5_z22tmofudeh3tyeifpjvwjl5ei
+  chalk: 5.0.1
   clean-webpack-plugin: 4.0.0_webpack@5.74.0
   cross-env: 7.0.3
   css-loader: 6.7.1_webpack@5.74.0
@@ -2208,6 +2210,11 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    dev: true
+
+  /chalk/5.0.1:
+    resolution: {integrity: sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
   /chokidar/2.1.8_supports-color@6.1.0:
